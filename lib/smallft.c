@@ -1247,8 +1247,8 @@ void drft_init(drft_lookup *l,int n){
 
 void drft_clear(drft_lookup *l){
   if(l){
-    if(l->trigcache)_ogg_free(l->trigcache);
-    if(l->splitcache)_ogg_free(l->splitcache);
+    _ogg_free(l->trigcache);
+    _ogg_free(l->splitcache);
     memset(l,0,sizeof(*l));
   }
 }
